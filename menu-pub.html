@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>Menì¹¹ – Nome del Pub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --card: #1a1a1a;
+      --text: #f5f5f5;
+      --muted: #b0b0b0;
+      --accent: #ffb700;
+      --border: #333;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 1.25rem 1rem 3rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      color: var(--accent);
+      margin: 0 0 0.25rem 0;
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .info {
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-top: 0.4rem;
+    }
+
+    section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.1rem;
+      margin: 1.25rem 0;
+    }
+
+    h2 {
+      margin: 0 0 0.7rem 0;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--accent);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.35rem;
+    }
+
+    .item {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.5rem 1rem;
+      padding: 0.35rem 0;
+      align-items: baseline;
+    }
+
+    .item-name {
+      font-size: 0.98rem;
+    }
+
+    .item-desc {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: -0.15rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .price {
+      font-weight: 700;
+      color: var(--text);
+      white-space: nowrap;
+    }
+
+    .note {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      padding: 0.15rem 0.45rem;
+      border-radius: 999px;
+      background: #2a2a2a;
+      color: var(--muted);
+      margin-left: 0.4rem;
+      vertical-align: middle;
+    }
+
+    @media (max-width: 480px) {
+      .logo { font-size: 1.5rem; }
+      h2 { font-size: 1.15rem; }
+      .item { grid-template-columns: 1fr auto; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 class="logo">Nome del Pub</h1>
+      <p class="subtitle">Birre artigianali • Panini • Cocktail</p>
+      <p class="info">Via Esempio 123, Palermo &bull; Aperto tutti i giorni 18:00–02:00</p>
+    </header>
+
+    <section>
+      <h2>Birre alla spina</h2>
+
+      <div class="item">
+        <div>
+          <div class="item-name">Bionda <span class="badge">0,4 l</span></div>
+          <div class="item-desc">Lager chiara, fresca e beverina.</div>
+        </div>
+        <div class="price">€ 5,00</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="item-name">Rossa <span class="badge">0,4 l</span></div>
+          <div class="item-desc">Ambrata, leggermente maltata.</div>
+        </div>
+        <div class="price">€ 5,50</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="item-name">IPA <span class="badge">0,4 l</span></div>
+          <div class="item-desc">India Pale Ale, aromatica e amara.</div>
+        </div>
+        <div class="price">€ 6,00</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="item-name">Stout <span class="badge">0,4 l</span></div>
+          <div class="item-desc">Scura, corposa, note di caffÃ¨.</div>
+        </div>
+        <div class="price">€ 6,00</div>
+      </div>
+
+      <p class="note">Disponibili anche formati da 0,2 l a prezzo ridotto.</p>
+    </section>
+
+    <section>
+      <h2>Birre in bottiglia</h2>
+
+      <div class="item">
+        <div>
+          <div class="item-name">Weizen <span class="badge">0,5 l</span></div>
+          <div class="item-desc">Birra di frumento, fresca e speziata.</div>
+        </div>
+        <div class="price">€ 6,50</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="item-name">Saison <span class="badge">0,33 l</span></div>
+          <div class="item-desc">Birra rustica, lievemente pepata.</div>
+        </div>
+        <div class="price">€ 6,00</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Panini</h2>
+
+      <div class="item">
+        <div>
+          <div class="item-name">Panino con arancina</div>
+          <div class="item-desc">Arancina al ragÃ¹, insalata, salsa dello chef.</div>
+        </div>
+        <div class="price">€ 6,50</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="item-name">Panino con panelle</div>
+          <div class="item-desc">Panelle croccanti, ricotta, pomodoro.</div>
+        </div>
+        <div class="price">€ 6,00</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="item-name">Cheeseburger del pub</div>
+          <div class="item-desc">Manzo, cheddar, bacon, cipolla caramellata.</div>
+        </div>
+        <div class="price">€ 8,50</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="item-name">Veggie burger</div>
+          <div class="item-desc">Hamburger vegetale, insalata, pomodoro, salsa yogurt.</div>
+        </div>
+        <div class="price">€ 8,00</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Cocktail & Drink</h2>
+
+      <div class="item">
+        <div>
+          <div class="item-name">Spritz</div>
+          <div class="item-desc">Aperol / Select / Campari, prosecco, soda.</div>
+        </div>
+        <div class="price">€ 6,00</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="item-name">Gin Tonic</div>
+          <div class="item-desc">Gin premium, tonica premium, lime.</div>
+        </div>
+        <div class="price">€ 7,50</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="item-name">Moscow Mule</div>
+          <div class="item-desc">Vodka, ginger beer, lime.</div>
+        </div>
+        <div class="price">€ 7,50</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="item-name">Negroni</div>
+          <div class="item-desc">Gin, Campari, vermut rosso.</div>
+        </div>
+        <div class="price">€ 7,00</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Soft & Acqua</h2>
+
+      <div class="item">
+        <div>
+          <div class="item-name">Acqua naturale / frizzante</div>
+          <div class="item-desc">0,75 l</div>
+        </div>
+        <div class="price">€ 2,50</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="item-name">Coca-Cola / Coca-Cola Zero</div>
+          <div class="item-desc">0,33 l</div>
+        </div>
+        <div class="price">€ 3,00</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="item-name">Birra analcolica</div>
+          <div class="item-desc">0,33 l</div>
+        </div>
+        <div class="price">€ 4,00</div>
+      </div>
+    </section>
+
+    <footer>
+      MenÃ¹ digitale â aggiornato a settembre 2026<br />
+      I prezzi si intendono IVA inclusa.
+    </footer>
+  </div>
+</body>
+</html>
